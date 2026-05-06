@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Pasta Bella</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>La Pasta Bella</h1>
+    <p>Authentic Italian Taste</p>
+</header>
+
+<nav>
+    <a href="#gallery">Gallery</a>
+    <a href="#menu">Menu</a>
+    <a href="#reservation">Reservation</a>
+</nav>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery">
+    <h2>Our Ambiance</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+    </div>
+</section>
+
+<!-- ===== MENU ===== -->
+<section id="menu">
+    <h2>Our Menu</h2>
+
+    <div class="menu-buttons">
+        <button onclick="filterMenu('all')">All</button>
+        <button onclick="filterMenu('veg')">Veg</button>
+        <button onclick="filterMenu('nonveg')">Non-Veg</button>
+    </div>
+
+    <div class="menu">
+
+        <div class="card veg">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80">
+            <h3>Margherita Pizza</h3>
+            <p>₹250</p>
+        </div>
+
+        <div class="card nonveg">
+            <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9">
+            <h3>Chicken Pasta</h3>
+            <p>₹350</p>
+        </div>
+
+        <div class="card veg">
+            <img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3">
+            <h3>Veg Lasagna</h3>
+            <p>₹300</p>
+        </div>
+
+        <div class="card nonveg">
+            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+            <h3>Grilled Chicken</h3>
+            <p>₹400</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== RESERVATION ===== -->
+<section id="reservation">
+    <h2>Book a Table</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="date" required>
+        <input type="time" required>
+
+        <select>
+            <option>1 Person</option>
+            <option>2 People</option>
+            <option>4 People</option>
+        </select>
+
+        <button type="submit">Reserve Now</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 La Pasta Bella</p>
+</footer>
+
+</body>
+</html>
