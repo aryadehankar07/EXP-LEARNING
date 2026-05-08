@@ -1,99 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La Pasta Bella</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Pasta Bella</title>
 
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-    <h1>La Pasta Bella</h1>
-    <p>Authentic Italian Taste</p>
+
+    <div class="logo">
+        La Pasta <span>Bella</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#menu">Menu</a>
+        <a href="#reservation">Reservation</a>
+    </nav>
+
 </header>
 
-<nav>
-    <a href="#gallery">Gallery</a>
-    <a href="#menu">Menu</a>
-    <a href="#reservation">Reservation</a>
-</nav>
+<!-- HERO SECTION -->
+<section class="hero" id="home">
 
-<!-- ===== GALLERY ===== -->
-<section id="gallery">
-    <h2>Our Ambiance</h2>
-    <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5">
-        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0">
-        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+    <div class="hero-content">
+
+        <h1>Authentic Italian Taste</h1>
+
+        <p>
+            Enjoy delicious pasta, pizza and Italian dishes
+            with a luxury dining experience.
+        </p>
+
+        <button>Book Table</button>
+
     </div>
+
 </section>
 
-<!-- ===== MENU ===== -->
-<section id="menu">
-    <h2>Our Menu</h2>
+<!-- GALLERY -->
+<h2 class="section-title" id="gallery">
+    Restaurant Gallery
+</h2>
 
-    <div class="menu-buttons">
-        <button onclick="filterMenu('all')">All</button>
-        <button onclick="filterMenu('veg')">Veg</button>
-        <button onclick="filterMenu('nonveg')">Non-Veg</button>
-    </div>
+<section class="gallery">
 
-    <div class="menu">
+    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4">
 
-        <div class="card veg">
-            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80">
+    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9">
+
+    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de">
+
+    <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1">
+
+</section>
+
+<!-- MENU -->
+<h2 class="section-title" id="menu">
+    Popular Dishes
+</h2>
+
+<div class="filter-buttons">
+
+    <button>All</button>
+    <button>Veg</button>
+    <button>Non-Veg</button>
+
+</div>
+
+<section class="menu-container">
+
+    <!-- CARD 1 -->
+    <div class="menu-card">
+
+        <span class="tag">Veg</span>
+
+        <img src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143">
+
+        <div class="menu-content">
+
             <h3>Margherita Pizza</h3>
-            <p>₹250</p>
-        </div>
 
-        <div class="card nonveg">
-            <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9">
-            <h3>Chicken Pasta</h3>
-            <p>₹350</p>
-        </div>
+            <p>
+                Fresh mozzarella cheese with basil leaves.
+            </p>
 
-        <div class="card veg">
-            <img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3">
-            <h3>Veg Lasagna</h3>
-            <p>₹300</p>
-        </div>
+            <div class="price">
 
-        <div class="card nonveg">
-            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
-            <h3>Grilled Chicken</h3>
-            <p>₹400</p>
+                <span>₹299</span>
+
+                <button>Order</button>
+
+            </div>
+
         </div>
 
     </div>
+
+    <!-- CARD 2 -->
+    <div class="menu-card">
+
+        <span class="tag">Non-Veg</span>
+
+        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9">
+
+        <div class="menu-content">
+
+            <h3>Chicken Pasta</h3>
+
+            <p>
+                Creamy white sauce pasta with grilled chicken.
+            </p>
+
+            <div class="price">
+
+                <span>₹399</span>
+
+                <button>Order</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="menu-card">
+
+        <span class="tag">Veg</span>
+
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38">
+
+        <div class="menu-content">
+
+            <h3>Veg Supreme Pizza</h3>
+
+            <p>
+                Loaded with cheese, olives and capsicum.
+            </p>
+
+            <div class="price">
+
+                <span>₹349</span>
+
+                <button>Order</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
-<!-- ===== RESERVATION ===== -->
-<section id="reservation">
-    <h2>Book a Table</h2>
+<!-- RESERVATION -->
+<h2 class="section-title" id="reservation">
+    Book A Table
+</h2>
+
+<section class="reservation">
 
     <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Email" required>
+
+        <input type="text"
+        placeholder="Your Name" required>
+
+        <input type="email"
+        placeholder="Your Email" required>
+
         <input type="date" required>
+
         <input type="time" required>
 
-        <select>
-            <option>1 Person</option>
-            <option>2 People</option>
-            <option>4 People</option>
+        <select required>
+
+            <option>Select Guests</option>
+
+            <option>2 Guests</option>
+
+            <option>4 Guests</option>
+
+            <option>6 Guests</option>
+
+            <option>8 Guests</option>
+
         </select>
 
-        <button type="submit">Reserve Now</button>
+        <input type="tel"
+        placeholder="Phone Number" required>
+
+        <textarea rows="5"
+        placeholder="Special Request"></textarea>
+
+        <button type="submit">
+            Reserve Now
+        </button>
+
     </form>
+
 </section>
 
+<!-- FOOTER -->
 <footer>
-    <p>© 2026 La Pasta Bella</p>
+
+    <p>
+        <i class="fa-solid fa-location-dot"></i>
+        La Pasta Bella, Italy Street
+    </p>
+
+    <p>
+        <i class="fa-solid fa-phone"></i>
+        +91 9876543210
+    </p>
+
+    <p>
+        <i class="fa-solid fa-envelope"></i>
+        info@lapastabella.com
+    </p>
+
+    <p>
+        © 2026 La Pasta Bella | All Rights Reserved
+    </p>
+
 </footer>
 
 </body>
