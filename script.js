@@ -1,46 +1,56 @@
-// ===== MENU FILTER FUNCTION =====
-function filterMenu(category) {
-    let items = document.querySelectorAll(".card");
-    let buttons = document.querySelectorAll(".menu-buttons button");
+// MENU FILTER
 
-    // Remove active class from all buttons
-    buttons.forEach(btn => btn.classList.remove("active"));
+const filterButtons = document.querySelectorAll(".filter-buttons button");
+const menuCards = document.querySelectorAll(".menu-card");
 
-    // Add active class to clicked button
-    event.target.classList.add("active");
+filterButtons.forEach(button => {
 
-    // Filter logic
-    items.forEach(item => {
-        if (category === "all") {
-            item.style.display = "block";
-        } 
-        else if (item.classList.contains(category)) {
-            item.style.display = "block";
-        } 
-        else {
-            item.style.display = "none";
-        }
+    button.addEventListener("click", () => {
+
+        const category = button.innerText;
+
+        menuCards.forEach(card => {
+
+            const tag = card.querySelector(".tag").innerText;
+
+            if(category === "All" || category === tag){
+                card.style.display = "block";
+            }
+            else{
+                card.style.display = "none";
+            }
+
+        });
+
     });
-}
+
+});
 
 
-// ===== FORM SUBMIT FUNCTION =====
-document.addEventListener("DOMContentLoaded", function () {
+// RESERVATION FORM
 
-    const form = document.querySelector("form");
+const form = document.querySelector("form");
 
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
+form.addEventListener("submit", function(event){
 
-        let name = form.querySelector("input[type='text']").value;
-        let email = form.querySelector("input[type='email']").value;
+    event.preventDefault();
 
-        if (name === "" || email === "") {
-            alert("Please fill all details!");
-        } else {
-            alert("Reservation Confirmed, " + name + " 🎉");
-            form.reset();
-        }
+    alert("Table Reserved Successfully!");
+
+    form.reset();
+
+});
+
+
+// BOOK TABLE BUTTON
+
+const heroButton = document.querySelector(".hero button");
+
+heroButton.addEventListener("click", () => {
+
+    document.querySelector("#reservation")
+    .scrollIntoView({
+        behavior: "smooth"
     });
 
 });
